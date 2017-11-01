@@ -15,7 +15,7 @@
     // Show promptString
     NSLog(@"%@", promptString);
     
-    // Collect input with fgets / scanf
+    // Collect input with fgets 
     char inputChars[255];
     fgets(inputChars, 255, stdin);
     

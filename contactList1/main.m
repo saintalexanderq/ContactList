@@ -18,20 +18,20 @@ int main() {
     ContactList *contactList = [[ContactList alloc] init];
     
     while (YES) {
-        NSString *userInput = [collector inputForPrompt:@"What would you like do next?\n new - Create a new contact\n list - List all contacts\n quit - Exit Application"];
+        NSString *userInput = [collector inputForPrompt:@"What would you like do next?\n NEW - Create a new contact\n LIST - List all contacts\n QUIT - Exit Application"];
         
-        if ([userInput isEqualToString:@"quit"]) {
+        if ([userInput isEqualToString:@"QUIT"]) {
             return 0;
             
-        } else if ([userInput isEqualToString:@"new"]) {
+        } else if ([userInput isEqualToString:@"NEW"]) {
             Contact *contact = [[Contact alloc] init];
-            NSString *name = [collector inputForPrompt:@"Enter your full name"];
+            NSString *name = [collector inputForPrompt:@"Enter Name"];
             contact.name = name;
-            NSString *email = [collector inputForPrompt:@"Enter your email"];
+            NSString *email = [collector inputForPrompt:@"Enter Email"];
             contact.email = email;
             [contactList addContact:contact];
             
-        } else if ([userInput isEqualToString:@"list"]) {
+        } else if ([userInput isEqualToString:@"LIST"]) {
             [contactList printContacts];
         }
     }
